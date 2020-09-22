@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>金融数学</title>
+  <title>Chapter 1 Interest rate | 金融数学</title>
   <meta name="description" content="The output format is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="金融数学" />
+  <meta property="og:title" content="Chapter 1 Interest rate | 金融数学" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="sxpyggy/Financial-Mathematics" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="金融数学" />
+  <meta name="twitter:title" content="Chapter 1 Interest rate | 金融数学" />
   
   <meta name="twitter:description" content="The output format is bookdown::gitbook." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="interest-rate.html"/>
+<link rel="prev" href="index.html"/>
+<link rel="next" href="level-annuity.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -135,41 +135,68 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">金融数学</h1>
-<p class="author"><em>Financial Mathematics</em></p>
-<p class="date"><em>2020-09-17 16:50:40</em></p>
+<div id="interest-rate" class="section level1">
+<h1><span class="header-section-number">Chapter 1</span> Interest rate</h1>
+<div id="key-concepts" class="section level2">
+<h2><span class="header-section-number">1.1</span> Key concepts</h2>
+<div id="functions" class="section level3 unnumbered">
+<h3>Functions</h3>
+<ul>
+<li><p>Accumulation function <span class="math display">\[a(t)\]</span></p></li>
+<li><p>Discount function <span class="math display">\[a^{-1}(t)\]</span></p></li>
+</ul>
 </div>
-<div id="欢迎" class="section level1 unnumbered">
-<h1>欢迎</h1>
-<p>在这里，我们同步课堂，总结每章的<strong>重点、难点</strong>，并发布<strong>课后作业</strong>。课后作业需在<u>下次上课前</u>交到讲台上。</p>
-<p>我们这里主要以英文表述，有以下两个原因</p>
-<ol style="list-style-type: decimal">
-<li><p>方便大家准备SOA/CAS的 <a href="https://www.soa.org/education/exam-req/edu-exam-fm-detail/">Exam FM: Financial Mathematics</a>考试；</p></li>
-<li><p>方便大家阅读相关英文文献。</p></li>
-</ol>
-<p>此网站由授课老师<u>高光远</u>、助教<u>程轶鹏</u>、助教<u>胡夏新</u>管理，欢迎大家反馈意见到助教、微信群、或邮箱<a href="mailto:guangyuan.gao@ruc.edu.cn" class="email">guangyuan.gao@ruc.edu.cn</a>。</p>
-<div id="答疑" class="section level2 unnumbered">
-<h2>答疑</h2>
-<p>我定期把同学们的普遍疑问在这里解答，欢迎提问！</p>
-<p><strong><span class="math inline">\(i\)</span> 和 <span class="math inline">\(d\)</span> 的关系</strong> （2020/09/16）</p>
-<p>很多同学问课件上的这道题目。</p>
-<p>问题：已知年实际利率为5%。回答下述问题：</p>
-<p>（1）100万元贷款在年末的利息是多少？<span class="math inline">\(100\times5%\)</span></p>
-<p>（2）如果在贷款起始日收取利息，应该收取多少利息？<span class="math inline">\(100\times i/(1+i)=100\times d\)</span></p>
-<p>（3）年实际贴现率是多少？<span class="math inline">\(d=i/(1+i)\)</span></p>
-<p><span class="math inline">\(i\)</span> 和 <span class="math inline">\(d\)</span> 的区别可以理解为 <span class="math inline">\(i\)</span> 是在<strong>期末</strong>付，<span class="math inline">\(d\)</span> 是在<strong>期初</strong>付。<span class="math inline">\(d=i\times v\)</span>，即期末 <span class="math inline">\(i\)</span> 的<strong>现值</strong>是 <span class="math inline">\(d\)</span>。</p>
-<p>所以（1）是期末收的利息，（2）是期初收的利息。期初收的利息要比期末收的少，因为银行收到的这部分利息在这一年中还能产生利息，期初收的 <span class="math inline">\(d\)</span> 到期末是 <span class="math inline">\(i\)</span>。</p>
-<p>贴现率 <span class="math inline">\(d\)</span> 的另一种理解就是利息 <span class="math inline">\(i\)</span> 的现值。</p>
-<p><strong>计算器</strong> （2020/09/10）</p>
-<p>在课堂测验和期末考试，没有对计算器的严格要求，但至少需要科学计算器。大家不需要购买昂贵的可编程计算器，在这门课中，体现不出可编程计算器的优势。</p>
-<p>建议的计算器是SOA/CAS要求的<a href="https://www.soa.org/education/exam-req/exam-day-info/edu-id-calculators/">计算器</a>。</p>
-<p><strong>最终成绩</strong> （2020/09/10）</p>
-<ol style="list-style-type: decimal">
-<li><p>平时成绩占40%，期末成绩占60%。</p></li>
-<li><p>平时成绩主要根据课堂点名、课外作业的完成态度、随堂测试的准确度评定。</p></li>
-</ol>
+<div id="interest-rate-1" class="section level3 unnumbered">
+<h3>Interest rate</h3>
+<ul>
+<li><p>Effective rate of interest/discount <span class="math display">\[i,d\]</span></p></li>
+<li><p>Simple interest <span class="math display">\[a(t)=1+it\]</span></p></li>
+<li><p>Compound interest <span class="math display">\[a(t)=(1+i)^t\]</span></p></li>
+<li><p>Discount factor <span class="math display">\[v=(1+i)^{-1}\]</span></p></li>
+<li><p>Accumulation factor of <span class="math inline">\(t\)</span> years <span class="math display">\[(1+i)^t\]</span></p></li>
+<li><p>Discount factor of <span class="math inline">\(t\)</span> years <span class="math display">\[(1+i)^{-t}\]</span></p></li>
+<li><p>Nominal rate of interest/discount <span class="math display">\[i^{(m)},d^{(m)}\]</span></p></li>
+<li><p>Force of interest <span class="math display">\[\delta\]</span></p></li>
+</ul>
+</div>
+<div id="values" class="section level3 unnumbered">
+<h3>Values</h3>
+<ul>
+<li><p>Accumulated value (future value)</p></li>
+<li><p>Present value</p></li>
+</ul>
+</div>
+</div>
+<div id="key-equations" class="section level2">
+<h2><span class="header-section-number">1.2</span> Key equations</h2>
+<div id="accumulation-and-discount" class="section level3 unnumbered">
+<h3>Accumulation and discount</h3>
+<p><span class="math display">\[a(t)=(1+i)^t=(1-d)^{-t}\]</span></p>
+<p><span class="math display">\[a^{-1}(t)=(1+i)^{-t}=(1-d)^t=v^t\]</span></p>
+</div>
+<div id="effective-interest-rate-and-discount-rate" class="section level3 unnumbered">
+<h3>Effective interest rate and discount rate</h3>
+<p><span class="math display">\[i=\frac{d}{1-d}\]</span></p>
+<p><span class="math display">\[d=\frac{i}{1+i}\]</span></p>
+<p><span class="math display">\[d=iv\]</span></p>
+<p><span class="math display">\[v=1-d\]</span></p>
+<p><span class="math display">\[i-d=id\]</span></p>
+</div>
+<div id="nominal-interest-rate-and-effective-interest-rate" class="section level3 unnumbered">
+<h3>Nominal interest rate and effective interest rate</h3>
+<p><span class="math display">\[1+i=\left(1+\frac{i^{(m)}}{m}\right)^m\]</span>
+<span class="math display">\[1-d=\left(1-\frac{d^{(m)}}{m}\right)^m\]</span>
+<span class="math display">\[d^{(m)}=i^{(m)}\times\left(1+\frac{i^{(m)}}{m}\right)^{-1}\]</span></p>
+</div>
+<div id="force-of-interest" class="section level3 unnumbered">
+<h3>Force of interest</h3>
+<p><span class="math display">\[\delta(t)=\frac{a&#39;(t)}{a(t)}\]</span></p>
+<p><span class="math display">\[a(t)=e^{\int_0^t\delta(s)ds}\]</span></p>
+<p><span class="math display">\[\delta=\ln(1+i)\]</span>
+<span class="math display">\[\delta=\lim_{m\rightarrow\infty} i^{(m)}=\lim_{m\rightarrow\infty} d^{(m)}=\ln(1+i)\]</span></p>
+<p><span class="math display">\[d\le d^{(2)}\le d^{(3)}\le\cdots\le \delta\le\cdots\le i^{(3)}\le i^{(2)}\le i\]</span></p>
 
+</div>
 </div>
 </div>
             </section>
@@ -177,8 +204,8 @@
           </div>
         </div>
       </div>
-
-<a href="interest-rate.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="level-annuity.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
